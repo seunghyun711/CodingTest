@@ -69,6 +69,6 @@ public class Main{
             }
         }
         // 4. 결과 출력
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 }
