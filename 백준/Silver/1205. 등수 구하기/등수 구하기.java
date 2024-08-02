@@ -1,6 +1,6 @@
 /*
 1. N, 점수, P 입력
-2. N이 0보다 큰 경우 현재 랭킹 리스트에 있는 점수 입력(LinkedList에 저장)
+2. N이 0보다 큰 경우 현재 랭킹 리스트에 있는 점수 입력
 3. 1번에서 입력받은 점수를 리스트에 삽입
 4. 리스트를 내림차순으로 정렬
 5. 새로 삽입된 점수의 인덱스 출력
@@ -11,7 +11,7 @@ public class Main{
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
-        LinkedList<Integer> list = new LinkedList<>(); // 랭킹 리스트
+        ArrayList<Integer> list = new ArrayList<>(); // 랭킹 리스트
         
         // 1. N, 점수, P 입력
         st = new StringTokenizer(br.readLine());
@@ -19,7 +19,7 @@ public class Main{
         int score = Integer.parseInt(st.nextToken()); // 점수
         int P = Integer.parseInt(st.nextToken()); // P
         
-        // 2. N이 0보다 큰 경우 현재 랭킹 리스트에 있는 점수 입력(LinkedList에 저장)
+        // 2. N이 0보다 큰 경우 현재 랭킹 리스트에 있는 점수 입력
         if(N > 0){ 
             st = new StringTokenizer(br.readLine());
             for(int i = 0; i < N; i++){
