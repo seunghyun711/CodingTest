@@ -34,11 +34,14 @@ public class Main{
         Collections.sort(boj);
 
         // 6. 일반 학습 기록 정렬
-        Collections.sort(studyMemo, (a,b) -> {
-            if(a.length() == b.length()){
-                return a.compareTo(b);
-            }else{
-                return a.length() - b.length();
+        Collections.sort(studyMemo, new Comparator<String>() {
+            @Override
+            public int compare(String a, String b) {
+                if (a.length() == b.length()) { // 비교 중인 문자열의 길이가 같은 경우
+                    return a.compareTo(b); // 사전 순 정렬 
+                }else{ 
+                    return a.length() - b.length(); // 길이 순 정렬
+                }
             }
         });
 
