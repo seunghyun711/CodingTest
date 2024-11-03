@@ -2,8 +2,7 @@
 1. N 입력
 2. 색 입력
 3. bfs를 이용해 구역의 개수 계산
-4. bfs를 통해 일반인이 보는 구역의 개수를 구하고, 초록색인 구간을 빨간색으로 변경
-(적록 색약이 보는 구역의 개수를 구하기 위해서)
+4. bfs를 통해 일반인이 보는 구역의 개수를 구한다.
 5. bfs를 통해 적록 색약이 보는 구역의 개수 계산
 6. 결과 출력
 */
@@ -44,6 +43,10 @@ public class Main{
                     count++;
                     bfs(i, j);
                 }
+                // colorMap에서 초록색인 구간을 빨간색으로 변경(적록 색맹의 구역 탐색 결과 도출을 위해 변경)
+                if(colorMap[i][j] == 'G'){
+                    colorMap[i][j] = 'R';
+                }
             }
         }
         sb.append(count + " ");
@@ -57,6 +60,7 @@ public class Main{
                     count++;
                     bfs(i, j);
                 }
+                
             }
         }
         sb.append(count);
@@ -66,7 +70,7 @@ public class Main{
         
     }
     
-    // 4. bfs를 통해 일반인이 보는 구역의 개수를 구하고, 초록색인 구간을 빨간색으로 변경
+    // 4. bfs를 통해 일반인이 보는 구역의 개수를 구한다.
     static void bfs(int r, int c){
         q.offer(new int[]{r, c});
         visited[r][c] = true; // 방문처리
@@ -89,10 +93,7 @@ public class Main{
                     }
                 }
             }
-            // colorMap에서 초록색인 구간을 빨간색으로 변경(적록 색맹의 구역 탐색 결과 도출을 위해 변경)
-            if(colorMap[cRow][cColumn] == 'G'){
-                colorMap[cRow][cColumn] = 'R';
-            }
+            
         }
     }
 }
