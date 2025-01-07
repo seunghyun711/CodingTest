@@ -87,10 +87,7 @@ public class Main{
             int col = p.col;
             int cost = p.cost;
             
-            // 이미 최소 금액인 경우 넘어감 
-            if(cost > dp[row][col]){
-                continue;
-            }
+           
             
             for(int i = 0; i < 4; i++){
                 // 현재 위치에서 인접한 위치 탐색
