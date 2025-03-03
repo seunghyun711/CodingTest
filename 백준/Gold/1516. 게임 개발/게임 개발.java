@@ -40,7 +40,7 @@ public class Main{
         }
         
         // 3. 위상정렬을 이용해 각 건물이 완성되기까지의 최소 시간 계산
-        int[] result = new int[N + 1]; // 각 건물이 지어지는데 걸리는 시간(최종 시간)
+        int[] result = new int[N + 1]; // 특정 건물을 짓기 전까지 걸린 시간
         Queue<Integer> q = new LinkedList<>();
         
         for(int i = 1; i <= N; i++){
