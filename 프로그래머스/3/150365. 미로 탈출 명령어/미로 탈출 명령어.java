@@ -24,7 +24,7 @@ class Solution {
         
         // 1. 출발 지점과 탈출 지점의 거리를 통해 해당 문제 해결 가능 여부 파악
         int distance = getDistance(startX, startY);
-        if(movedDist < distance ||((movedDist - getDistance(x, y)) % 2 != 0)){ // k가 두 지점 간의 거리보다 작은 경우, 이동해야할 거리만큼 이동했을 때 탈출 지점에 도달 할 수 없는 경우 계산을 할 수 없음.
+        if(movedDist < distance ||((movedDist - getDistance(startX, startY)) % 2 != 0)){ // k가 두 지점 간의 거리보다 작은 경우, 이동해야할 거리만큼 이동했을 때 탈출 지점에 도달 할 수 없는 경우 계산을 할 수 없음.
             return answer;
         }
         
