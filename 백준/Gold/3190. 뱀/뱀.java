@@ -52,8 +52,8 @@ public class Main{
     }
     
     static int start(){
-        int movedR = 0;
-        int movedC = 0;
+        int nr = 0; 
+        int nc = 0;
         int time = 0;
         int direction = 0;
         
@@ -63,8 +63,8 @@ public class Main{
             time++;
             
             // 이동
-            int nr = movedR + dr[direction];
-            int nc = movedC + dc[direction];
+            nr += dr[direction];
+            nc += dc[direction];
             
             // 범위를 벗어나거나 자기자신의 몸에 부딪히는 경우 게임 종료
             if(isGameOver(nr, nc)){
@@ -89,10 +89,6 @@ public class Main{
                     direction = (direction + 1) % 4; // 0 -> 1, 1 -> 2, 2 -> 3, 3 -> 0
                 }
             }
-            
-            // 현재 위치
-            movedR = nr;
-            movedC = nc;
         }
         return time;
     }
