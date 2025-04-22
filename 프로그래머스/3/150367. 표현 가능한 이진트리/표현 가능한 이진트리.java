@@ -54,9 +54,7 @@ class Solution {
             return;
         }
         
-        // 왼쪽과 오른쪽 서브트리 먼저 검사
-        checkFullBt(start, mid - 1);
-        checkFullBt(mid + 1, end);
+
         
         // 루트 노드의 값이 0인데 자식 노드의 값이 1인 경우는 포화 이진트리가 아님
         if(root == '0'){
@@ -71,6 +69,9 @@ class Solution {
             }
         }
         
-        
+        // 왼쪽과 오른쪽 서브트리 검사
+        checkFullBt(start, mid - 1);
+        checkFullBt(mid + 1, end);
+
     }
 }
