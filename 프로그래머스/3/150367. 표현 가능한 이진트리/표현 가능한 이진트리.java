@@ -53,9 +53,7 @@ class Solution {
         if(start == end){
             return;
         }
-        
 
-        
         // 루트 노드의 값이 0인데 자식 노드의 값이 1인 경우는 포화 이진트리가 아님
         if(root == '0'){
             for(int i = start; i <= end; i++){
